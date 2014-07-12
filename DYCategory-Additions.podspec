@@ -19,15 +19,6 @@ Pod::Spec.new do |s|
  
   s.requires_arc = true
   
-  s.subspec 'ALAsset' do |sbs|
-   
-  	sbs.subspec 'ALAsset+Extras' do |tbs|
- 
-    	tbs.source_files = 'Category/ALAsset/ALAsset+Extras/*.{h,m,mm}'  
-    	 
-  	end 
-    		 
-  end 
   
   s.subspec 'Math' do |sbs|
    
@@ -96,20 +87,23 @@ Pod::Spec.new do |s|
    
   s.subspec 'NSString' do |sbs|
    
-  	sbs.subspec 'NSString+Blank' do |tbs|
- 
-    	tbs.source_files = 'Category/NSString/NSString+Blank/*.{h,m,mm}'  
-    	 
-  	end 
   	sbs.subspec 'NSString+BOOL' do |tbs|
  
     	tbs.source_files = 'Category/NSString/NSString+BOOL/*.{h,m,mm}'  
     	 
   	end 
+  	
+  	sbs.subspec 'NSString+Blank' do |tbs|
+ 
+    	tbs.source_files = 'Category/NSString/NSString+Blank/*.{h,m,mm}'  
+    	
+     	tbs.dependency 'DYCategory-Additions/NSString/NSString+BOOL'
+    	 
+  	end 
    
   	sbs.subspec 'NSString+Contains' do |tbs|
  
-    	tbs.source_files = 'Category/NSString/NNSString+Contains/*.{h,m,mm}'  
+    	tbs.source_files = 'Category/NSString/NSString+Contains/*.{h,m,mm}'  
     	 
   	end 
   	sbs.subspec 'NSString+Version' do |tbs|
@@ -183,6 +177,20 @@ Pod::Spec.new do |s|
   	sbs.subspec 'UIImageExtras' do |tbs|
  
     	tbs.source_files = 'Category/UIImage/UIImageExtras/*.{h,m,mm}'  
+    	 
+  	end 
+    		 
+  end 
+  
+  
+  s.subspec 'ALAsset' do |sbs|
+   
+  	sbs.subspec 'ALAsset+Extras' do |tbs|
+  	
+     	tbs.dependency 'DYCategory-Additions/UIImage/UIImage+ScaleClip'
+     	tbs.dependency 'DYCategory-Additions/UIImage/UIImageExtras'
+ 
+    	tbs.source_files = 'Category/ALAsset/ALAsset+Extras/*.{h,m,mm}'  
     	 
   	end 
     		 
