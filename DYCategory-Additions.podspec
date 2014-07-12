@@ -3,8 +3,8 @@ Pod::Spec.new do |s|
  
 
   s.name         = "DYCategory-Additions"
-  s.version      = "1.0.0"
-  s.summary      = "AFNetworking的封装, 并提供一个 UIImageView+Loading  cache in fileSystem"
+  s.version      = "1.0.1"
+  s.summary      = "DYCategory-Additions  collection"
  
 
   s.homepage     = "https://github.com/junhaiyang/DYCategory-Additions"
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "6.0" 
 
  
-  s.source = { :git => 'https://github.com/junhaiyang/DYCategory-Additions.git' , :tag => '1.0.0'} 
+  s.source = { :git => 'https://github.com/junhaiyang/DYCategory-Additions.git' , :tag => '1.0.1'} 
  
   s.requires_arc = true
   
