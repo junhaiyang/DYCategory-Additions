@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
  
 
   s.name         = "DYCategory-Additions"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "DYCategory-Additions  collection"
  
 
@@ -15,20 +15,26 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "6.0" 
 
  
-  s.source = { :git => 'https://github.com/junhaiyang/DYCategory-Additions.git' , :tag => '1.0.1'} 
+  s.source = { :git => 'https://github.com/junhaiyang/DYCategory-Additions.git' , :tag => '1.0.2'} 
  
   s.requires_arc = true
   
+  s.source_files = 'CategorysHeader.h'  
   
-  s.subspec 'Math' do |sbs|
+  
+  s.subspec 'ALAsset' do |sbs|
    
-  	sbs.subspec 'Math+Degrees' do |tbs|
+  	sbs.subspec 'ALAsset+Extras' do |tbs|
+  	
+     	tbs.dependency 'DYCategory-Additions/UIImage/UIImage+ScaleClip'
+     	tbs.dependency 'DYCategory-Additions/UIImage/UIImageExtras'
  
-    	tbs.source_files = 'Category/Math/Math+Degrees/*.{h,m,mm}'  
+    	tbs.source_files = 'Category/ALAsset/ALAsset+Extras/*.{h,m,mm}'  
     	 
   	end 
     		 
   end 
+   
   
   s.subspec 'NSAttributedString' do |sbs|
    
@@ -65,6 +71,12 @@ Pod::Spec.new do |s|
   	sbs.subspec 'NSDictionary+JSON' do |tbs|
  
     	tbs.source_files = 'Category/NSDictionary/NSDictionary+JSON/*.{h,m,mm}'  
+    	 
+  	end 
+  	
+  	sbs.subspec 'NSDictionary+Data' do |tbs|
+ 
+    	tbs.source_files = 'Category/NSDictionary/NSDictionary+Data/*.{h,m,mm}'  
     	 
   	end 
     		 
@@ -112,17 +124,7 @@ Pod::Spec.new do |s|
     	 
   	end 
     		 
-  end 
-     
-  s.subspec 'UIApplication' do |sbs|
-   
-  	sbs.subspec 'UIApplication+LHSAdditions' do |tbs|
- 
-    	tbs.source_files = 'Category/UIApplication/UIApplication+LHSAdditions/*.{h,m,mm}'  
-    	 
-  	end 
-    		 
-  end 
+  end  
      
   s.subspec 'UIColor' do |sbs|
    
@@ -183,24 +185,12 @@ Pod::Spec.new do |s|
   end 
   
   
-  s.subspec 'ALAsset' do |sbs|
-   
-  	sbs.subspec 'ALAsset+Extras' do |tbs|
-  	
-     	tbs.dependency 'DYCategory-Additions/UIImage/UIImage+ScaleClip'
-     	tbs.dependency 'DYCategory-Additions/UIImage/UIImageExtras'
- 
-    	tbs.source_files = 'Category/ALAsset/ALAsset+Extras/*.{h,m,mm}'  
-    	 
-  	end 
-    		 
-  end 
      
   s.subspec 'UINavigationController' do |sbs|
    
-  	sbs.subspec 'UINavigationController+Extra' do |tbs|
+  	sbs.subspec 'UINavigationController+PushPop' do |tbs|
  
-    	tbs.source_files = 'Category/UINavigationController/UINavigationController+Extra/*.{h,m,mm}'  
+    	tbs.source_files = 'Category/UINavigationController/UINavigationController+PushPop/*.{h,m,mm}'  
     	 
   	end 
     		 
@@ -211,28 +201,6 @@ Pod::Spec.new do |s|
   	sbs.subspec 'UIScreen+LHSAdditions' do |tbs|
  
     	tbs.source_files = 'Category/UIScreen/UIScreen+LHSAdditions/*.{h,m,mm}'  
-    	 
-  	end 
-    		 
-  end
-     
-  s.subspec 'UIView' do |sbs|
-   
-  	sbs.subspec 'UIView+Click' do |tbs|
- 
-    	tbs.source_files = 'Category/UIView/UIView+Click/*.{h,m,mm}'  
-    	 
-  	end 
-   
-  	sbs.subspec 'UIView+Extras' do |tbs|
- 
-    	tbs.source_files = 'Category/UIView/UIView+Extras/*.{h,m,mm}'  
-    	 
-  	end 
-   
-  	sbs.subspec 'UIView+LHSAdditions' do |tbs|
- 
-    	tbs.source_files = 'Category/UIView/UIView+LHSAdditions/*.{h,m,mm}'  
     	 
   	end 
     		 

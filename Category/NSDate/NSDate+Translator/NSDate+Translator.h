@@ -34,6 +34,10 @@
 
 @interface NSDate (Translator)
 
+-(long long)longLongValue;
+ 
++ (instancetype)dateWithTimeLongLongValue:(long long)value;
+
 - (NSUInteger) daysAgo;
 - (NSUInteger) hoursAgo;
 - (NSUInteger) daysAgoAgainstMidnight;

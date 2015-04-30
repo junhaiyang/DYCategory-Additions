@@ -10,10 +10,10 @@
 
 @interface UIDevice (Extras)
 
++(BOOL)systemGreaterEqual8;
+
 +(BOOL)systemGreaterEqual7;
 
-+(BOOL)systemGreaterEqual6;
-
-+(BOOL)screenFourInch;
++(BOOL)systemGreaterEqual6; 
 
 @end

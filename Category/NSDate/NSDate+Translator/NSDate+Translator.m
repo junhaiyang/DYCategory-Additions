@@ -36,6 +36,15 @@
  * This guy can be a little unreliable and produce unexpected results,
  * you're better off using daysAgoAgainstMidnight
  */
+-(long long)longLongValue{
+    return (long long)(self.timeIntervalSince1970 *1000.0f);
+}
+
++ (instancetype)dateWithTimeLongLongValue:(long long)value{
+    NSTimeInterval timeIntervalSince1970 = (value *1.0f)/1000.0f;
+    return [NSDate dateWithTimeIntervalSince1970:timeIntervalSince1970];
+}
+
 - (NSUInteger) daysAgo
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
