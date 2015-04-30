@@ -37,6 +37,9 @@
 #import "UIImage+LHSAdditions.h"
 #import "UIImage+ScaleClip.h"
 #import "UIImageExtras.h"
+#import "UIImage+ETConvenience.h"
+#import "UIImage+RoundedCorner.h"
+#import "UIImage+MKAnimatedFaceGif.h"
 
 #import "UIScreen+LHSAdditions.h"
 

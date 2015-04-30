@@ -181,6 +181,24 @@ Pod::Spec.new do |s|
     	tbs.source_files = 'Category/UIImage/UIImageExtras/*.{h,m,mm}'  
     	 
   	end 
+   
+  	sbs.subspec 'UIImage+ETConvenience' do |tbs|
+ 
+    	tbs.source_files = 'Category/UIImage/UIImage+ETConvenience/*.{h,m,mm}'  
+    	 
+  	end 
+   
+  	sbs.subspec 'UIImage+MKAnimatedFaceGif' do |tbs|
+ 
+    	tbs.source_files = 'Category/UIImage/UIImage+MKAnimatedFaceGif/*.{h,m,mm}'  
+    	 
+  	end 
+   
+  	sbs.subspec 'UIImage+RoundedCorner' do |tbs|
+ 
+    	tbs.source_files = 'Category/UIImage/UIImage+RoundedCorner/*.{h,m,mm}'  
+    	 
+  	end 
     		 
   end 
   
