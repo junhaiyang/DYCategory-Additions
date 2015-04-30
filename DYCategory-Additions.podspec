@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
  
   s.requires_arc = true
   
-  s.source_files = 'CategorysHeader.h'  
+  s.source_files = 'Category/CategorysHeader.h'  
   
   
   s.subspec 'ALAsset' do |sbs|
