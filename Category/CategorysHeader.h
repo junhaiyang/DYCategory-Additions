@@ -43,10 +43,6 @@
 
 #import "UIScreen+LHSAdditions.h"
 
-#import "UIView+Click.h"
-#import "UIView+Extras.h"
-#import "UIView+LHSAdditions.h"
-
 #import "UIViewController+LHSAdditions.h"
 
 #endif
