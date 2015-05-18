@@ -37,11 +37,11 @@
  * you're better off using daysAgoAgainstMidnight
  */
 -(long long)longLongValue{
-    return (long long)(self.timeIntervalSince1970 *1000.0f);
+    return (long long)(self.timeIntervalSince1970 *1000.0);
 }
 
 + (instancetype)dateWithTimeLongLongValue:(long long)value{
-    NSTimeInterval timeIntervalSince1970 = (value *1.0f)/1000.0f;
+    NSTimeInterval timeIntervalSince1970 = (value *1.0)/1000.0;
     return [NSDate dateWithTimeIntervalSince1970:timeIntervalSince1970];
 }
 
