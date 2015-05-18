@@ -18,8 +18,7 @@
         return [self popToViewController:controller animated:animated];
     else
         [self pushViewController:[[aClass alloc] init] animated:NO];
-    
-    [self presentViewController:nil animated:NO completion:NULL];
+     
     return nil;
 }
 
