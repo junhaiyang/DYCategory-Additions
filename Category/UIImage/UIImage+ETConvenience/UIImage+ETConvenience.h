@@ -1,6 +1,6 @@
 
 // Native Frameworks
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface UIImage (ETConvenience)
 
